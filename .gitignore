@@ -1,0 +1,13 @@
+# Keil编译产物
+MDK-ARM/machine/
+MDK-ARM/*.axf
+MDK-ARM/*.hex
+MDK-ARM/*.o
+MDK-ARM/*.d
+MDK-ARM/*.crf
+MDK-ARM/*.map
+MDK-ARM/*.uvgui*
+
+# CubeMX生成临时文件
+*.ioc.bak
+.mxproject
