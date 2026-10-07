@@ -1,13 +1,43 @@
-# Keil编译产物
-MDK-ARM/machine/
-MDK-ARM/*.axf
-MDK-ARM/*.hex
-MDK-ARM/*.o
-MDK-ARM/*.d
-MDK-ARM/*.crf
-MDK-ARM/*.map
-MDK-ARM/*.uvgui*
-
-# CubeMX生成临时文件
-*.ioc.bak
+# STM32CubeMX generated metadata and backups
 .mxproject
+*.ioc.bak
+*.ioc.old
+
+# Keil user-specific settings
+*.uvoptx
+*.uvguix.*
+*.uvgui.*
+
+# Keil build output
+MDK-ARM/machine/
+MDK-ARM/Objects/
+MDK-ARM/Listings/
+*.axf
+*.bin
+*.hex
+*.elf
+*.o
+*.obj
+*.d
+*.crf
+*.map
+*.lst
+*.lnp
+*.dep
+*.htm
+*.build_log.htm
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.vs/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
+*~

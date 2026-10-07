@@ -9,10 +9,15 @@
 
 extern uint8_t mpu_whoami_id;      /* raw WHO_AM_I value read at init, for diagnostics */
 
+#define MPU6050_RAW_BUF_LEN 14U     /* accel(6) + temp(2) + gyro(6) */
+
 uint8_t MPU6050_WriteReg(uint8_t reg, uint8_t data);
 uint8_t MPU6050_ReadReg(uint8_t reg, uint8_t *buf, uint8_t len);
 uint8_t MPU6050_Init(void);
 uint8_t MPU6050_ReadRawData(int16_t *ax, int16_t *ay, int16_t *az,
                             int16_t *gx, int16_t *gy, int16_t *gz);
+uint8_t MPU6050_StartDMARead(uint8_t *buf);   /* start a 14-byte DMA burst read */
+void MPU6050_ParseRawData(const uint8_t *buf, int16_t *ax, int16_t *ay, int16_t *az,
+                          int16_t *gx, int16_t *gy, int16_t *gz);
 
 #endif
